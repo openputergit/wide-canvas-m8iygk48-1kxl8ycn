@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEdu Institute - Computer Education Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f2f5;
+        }
+        .skeumorphic {
+            background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+            border: 1px solid #d0d0d0;
+            box-shadow: 
+                0 1px 2px rgba(0,0,0,0.1),
+                inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+        .nav-item:hover {
+            background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 
+                0 2px 4px rgba(0,0,0,0.1),
+                0 8px 16px rgba(0,0,0,0.1);
+        }
+        .btn-3d {
+            background: linear-gradient(to bottom, #4CAF50, #45a049);
+            border: 1px solid #3d8b40;
+            box-shadow: 
+                0 1px 0 rgba(255,255,255,0.4) inset,
+                0 1px 3px rgba(0,0,0,0.2);
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+        }
+        .btn-3d:active {
+            box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="skeumorphic sticky top-0 z-50 bg-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="bi bi-pc-display text-3xl text-blue-600"></i>
+                <span class="text-2xl font-bold text-gray-800">TechEdu Institute</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="nav-item px-4 py-2 rounded-md text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#courses" class="nav-item px-4 py-2 rounded-md text-gray-700 hover:text-blue-600">Courses</a>
+                <a href="#inquiry" class="nav-item px-4 py-2 rounded-md text-gray-700 hover:text-blue-600">Inquiry</a>
+                <a href="#about" class="nav-item px-4 py-2 rounded-md text-gray-700 hover:text-blue-600">About</a>
+            </div>
+            <button class="md:hidden" onclick="toggleMenu()">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white skeumorphic p-4">
+        <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#courses" class="block py-2 text-gray-700 hover:text-blue-600">Courses</a>
+        <a href="#inquiry" class="block py-2 text-gray-700 hover:text-blue-600">Inquiry</a>
+        <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="card p-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl font-bold mb-4">Start Your IT Career Today</h1>
+                <p class="text-gray-600 mb-6">Learn from industry experts and get certified in various computer technologies.</p>
+                <a href="#courses" class="btn-3d inline-block px-6 py-3 text-white rounded-lg hover:opacity-90">
+                    Explore Courses
+                </a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="Computer Education" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div id="courses" class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-8 text-center">Our Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Course Card 1 -->
+            <div class="card p-6">
+                <i class="bi bi-code-slash text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                <p class="text-gray-600 mb-4">Learn HTML, CSS, JavaScript, and modern frameworks.</p>
+                <p class="text-blue-600 font-bold">Duration: 3 months</p>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="card p-6">
+                <i class="bi bi-phone text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Mobile App Development</h3>
+                <p class="text-gray-600 mb-4">Create apps for iOS and Android platforms.</p>
+                <p class="text-blue-600 font-bold">Duration: 4 months</p>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="card p-6">
+                <i class="bi bi-cloud text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Cloud Computing</h3>
+                <p class="text-gray-600 mb-4">Master AWS, Azure, and cloud technologies.</p>
+                <p class="text-blue-600 font-bold">Duration: 3 months</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inquiry Form -->
+    <div id="inquiry" class="container mx-auto px-4 py-12">
+        <div class="card max-w-2xl mx-auto p-8">
+            <h2 class="text-3xl font-bold mb-8 text-center">Course Inquiry Form</h2>
+            <form id="inquiryForm" class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 mb-2" for="name">Full Name</label>
+                    <input type="text" id="name" class="w-full p-3 border rounded-lg skeumorphic" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2" for="email">Email</label>
+                    <input type="email" id="email" class="w-full p-3 border rounded-lg skeumorphic" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="w-full p-3 border rounded-lg skeumorphic" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2" for="course">Interested Course</label>
+                    <select id="course" class="w-full p-3 border rounded-lg skeumorphic" required>
+                        <option value="">Select a course</option>
+                        <option value="web">Web Development</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="cloud">Cloud Computing</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-3d w-full py-3 text-white rounded-lg hover:opacity-90">
+                    Submit Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p><i class="bi bi-geo-alt"></i> 123 Tech Street, Digital City</p>
+                    <p><i class="bi bi-telephone"></i> +1 234 567 890</p>
+                    <p><i class="bi bi-envelope"></i> info@techedu.com</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="#courses" class="hover:text-blue-400">Courses</a></li>
+                        <li><a href="#inquiry" class="hover:text-blue-400">Inquiry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Form submission
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                course: document.getElementById('course').value
+            };
+            alert('Thank you for your inquiry! We will contact you soon.');
+            this.reset();
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
